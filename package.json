@@ -1,7 +1,7 @@
 {
   "name": "commitizen-test",
   "version": "4.1.0",
-  "description": "",
+  "description": "Test Commitizen",
   "license": "ISC",
   "author": "",
   "type": "commonjs",
