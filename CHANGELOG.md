@@ -1,3 +1,9 @@
+## 4.3.0-rc0 (2024-12-27)
+
+### Feat
+
+- **prerelease.js**: add script to fetch and display current git version
+
 ## 4.2.0 (2024-12-27)
 
 ### Feat
