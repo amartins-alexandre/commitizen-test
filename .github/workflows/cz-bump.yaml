@@ -35,7 +35,7 @@ jobs:
           echo "current_version=$(cz version --project)" >> $GITHUB_OUTPUT
 
       - name: Bump version
-        run: cz bump -nr 21 --changelog --yes
+        run: cz bump --no-raise 21 --changelog --yes
       
       - name: Get New Version
         id: new_version
