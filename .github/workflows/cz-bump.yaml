@@ -1,0 +1,53 @@
+name: Commitizen Bump
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Setup Commitizen
+        run: |
+          apt update \
+          && apt install pipx -y \
+          && pipx ensurepath \
+          && pipx install commitizen
+      
+      - name: Get Project Version
+        id: current_version
+        run: |
+          echo "current_version=$(cz version --project)" >> $GITHUB_OUTPUT
+
+      - name: Bump version
+        run: cz bump -nr 21 --changelog --yes
+      
+      - name: Get New Version
+        id: new_version
+        run: |
+          echo "new_version=$(cz version --project)" >> $GITHUB_OUTPUT
+      
+      - name: Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          # bump: version $current_version → $new_version
+          git commit -m "bump: version ${{ steps.current_version.outputs.current_version }} → ${{ steps.new_version.outputs.new_version }}"
+
+      
