@@ -1,3 +1,9 @@
+## 4.3.0 (2024-12-29)
+
+### Fix
+
+- **prerelease.js**: remove deprecated version fetching script
+
 ## 4.3.0-rc0 (2024-12-27)
 
 ### Feat
