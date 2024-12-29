@@ -1,15 +1,3 @@
-## 4.4.0 (2024-12-29)
-
-### Feat
-
-- add GitHub Actions workflow for automated version bumping with Commitizen
-
-### Fix
-
-- **cz-bump.yaml**: streamline version bump command by consolidating steps
-- **cz-bump.yaml**: update bump command to use --no-raise option
-- **cz-bump.yaml**: use sudo for apt commands in workflow setup
-
 ## 4.3.0 (2024-12-29)
 
 ### Fix
