@@ -35,11 +35,9 @@ jobs:
           echo "current_version=$(cz version --project)" >> $GITHUB_OUTPUT
 
       - name: Bump version
-        run: cz bump --no-raise 21 --changelog --yes
-      
-      - name: Get New Version
         id: new_version
         run: |
+          cz --no-raise 21 bump --changelog --yes
           echo "new_version=$(cz version --project)" >> $GITHUB_OUTPUT
       
       - name: Push changes
