@@ -1,3 +1,9 @@
+## 4.5.0 (2025-01-02)
+
+### Feat
+
+- **version-files**: migrate config from .cz.toml
+
 ## 4.4.0 (2025-01-02)
 
 ## 4.4.0 (2024-12-29)
