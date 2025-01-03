@@ -1,6 +1,6 @@
 {
   "name": "commitizen-test",
-  "version": "4.6.0-rc0",
+  "version": "4.6.0",
   "description": "Test Commitizen with Conventional Commits",
   "license": "ISC",
   "author": "",
