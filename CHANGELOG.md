@@ -1,3 +1,9 @@
+## 4.6.0-b0 (2025-01-03)
+
+### Feat
+
+- **semver**: add new script file for verify semver tag
+
 ## 4.5.1 (2025-01-02)
 
 ### Fix
